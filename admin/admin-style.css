@@ -1,0 +1,144 @@
+/* 🟢 General Admin Page Styling */
+.wrap {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 🟢 Tab Navigation */
+.nav-tab-wrapper {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.nav-tab {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    background: #e9e9e9;
+    margin-right: 5px;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+}
+
+.nav-tab:hover {
+    background: #dcdcdc;
+}
+
+.nav-tab-active {
+    background: #007cba;
+    color: #fff;
+}
+
+/* 🟢 Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: -1px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 🟢 Form Input Styles */
+.tab-content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.tab-content-inner input[type="text"] {
+    
+    width: 100%; /* Make input fields stretch fully */
+    max-width: 600px; /* Prevents them from getting too wide */
+    max-height: 50px; /* Taller inputs */
+    line-height:4;
+}
+
+/* ✅ Shipping Section Grid */
+#shipping .tab-content-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 cards per row */
+    gap: 15px;
+}
+
+/* ✅ Shipping Card Style */
+.shipping-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ✅ Shipping Labels */
+.shipping-card label {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* ✅ Inputs inside each card */
+.shipping-card input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ✅ Checkbox Styling */
+.shipping-card input[type="checkbox"] {
+    transform: scale(1.1);
+    cursor: pointer;
+    margin-left: 5px;
+}
+/* ✅ Fix Label Alignment for Store Notices */
+.dqb_store_notice_field {
+    display: flex;
+        flex-wrap: nowrap;
+        align-content: flex-end;
+        justify-content: flex-start;
+        align-items: center;
+}
+
+.dqb_store_notice_field label {
+    min-width: 200px; /* Adjust width if needed */
+}
+
+.dqb_store_notice_field textarea {
+    flex-grow: 1;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 1200px) {
+    #shipping .tab-content-inner {
+        grid-template-columns: repeat(3, 1fr); /* 3 per row on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    #shipping .tab-content-inner {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #shipping .tab-content-inner {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
+    }
+}

@@ -1,0 +1,165 @@
+# Copyright (C) 2025 Akram Cheraifia
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Quick Order Form 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/akram plugin\n"
+"POT-Creation-Date: 2025-02-25T11:10:38+00:00\n"
+"PO-Revision-Date: 2025-02-25 12:12+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: dzquickbuy\n"
+
+#. Plugin Name of the plugin
+#: wc-quick-order.php
+msgid "WooCommerce Quick Order Form"
+msgstr "نموذج الطلب السريع لـ WooCommerce"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: wc-quick-order.php
+msgid "https://yourwebsite.com"
+msgstr "https://yourwebsite.com"
+
+#. Description of the plugin
+#: wc-quick-order.php
+msgid "Adds a quick order form on product pages with customizable UI."
+msgstr "يضيف نموذج طلب سريع في صفحات المنتجات مع واجهة قابلة للتخصيص."
+
+#. Author of the plugin
+#: wc-quick-order.php
+msgid "Akram Cheraifia"
+msgstr "أكرم شريفية"
+
+#: admin/admin-page.php:11
+msgid "DzQuickBuy Settings"
+msgstr "إعدادات DzQuickBuy"
+
+#: admin/admin-page.php:14
+msgid "✅ All settings have been reset to default!"
+msgstr "✅ تمت إعادة تعيين جميع الإعدادات إلى الوضع الافتراضي!"
+
+#: admin/admin-page.php:19 admin/admin-page.php:32
+msgid "🔤 Titles"
+msgstr "🔤 العناوين"
+
+#: admin/admin-page.php:20 admin/admin-page.php:76
+msgid "🎨 Colors"
+msgstr "🎨 الألوان"
+
+#: admin/admin-page.php:21 admin/admin-page.php:99
+msgid "⚙️ Settings"
+msgstr "⚙️ الإعدادات"
+
+#: admin/admin-page.php:22 admin/admin-page.php:120
+msgid "🚫 Spam Protection"
+msgstr "🚫 الحماية من الطلبات الوهمية "
+
+#: admin/admin-page.php:23 admin/admin-page.php:137
+msgid "🚚 Shipping Prices"
+msgstr "🚚 أسعار الشحن"
+
+#: admin/admin-page.php:35
+msgid "Place Order Button Text:"
+msgstr "نص زر تقديم الطلب:"
+
+#: admin/admin-page.php:41
+msgid "Name Placeholder:"
+msgstr "نص للاسم:"
+
+#: admin/admin-page.php:47
+msgid "Phone Placeholder:"
+msgstr "نص للهاتف:"
+
+#: admin/admin-page.php:53
+msgid "State Placeholder:"
+msgstr "نص للولاية:"
+
+#: admin/admin-page.php:59
+msgid "Information text:"
+msgstr "نص المعلومات:"
+
+#: admin/admin-page.php:64
+msgid "Store Notices (One per Line):"
+msgstr "إشعارات المتجر (واحد لكل سطر):"
+
+#: admin/admin-page.php:79
+msgid "Main Color:"
+msgstr "اللون الرئيسي:"
+
+#: admin/admin-page.php:84
+msgid "Button Text Color:"
+msgstr "لون نص الزر:"
+
+#: admin/admin-page.php:89
+msgid "Form Border Color:"
+msgstr "لون اطار النموذج:"
+
+#: admin/admin-page.php:102
+msgid "Phone Number:"
+msgstr "رقم الهاتف:"
+
+#: admin/admin-page.php:107
+msgid "WhatsApp Number:"
+msgstr "رقم الواتساب:"
+
+#: admin/admin-page.php:112
+msgid "Thank You Page URL:"
+msgstr "رابط صفحة الشكر:"
+
+#: admin/admin-page.php:123
+msgid "Order Limit Per IP:"
+msgstr "حد الطلب لكل عنوان IP:"
+
+#: admin/admin-page.php:128
+msgid "Ban Duration (in minutes):"
+msgstr "مدة الحظر (بالدقائق):"
+
+#: admin/admin-page.php:208
+msgid "🚚 "
+msgstr "🚚 "
+
+#: admin/admin-page.php:210
+msgid "🏠 Home Delivery:"
+msgstr "🏠 التوصيل إلى المنزل:"
+
+#: admin/admin-page.php:214
+msgid "🏢 Office Delivery:"
+msgstr "🏢 التوصيل إلى المكتب:"
+
+#: admin/admin-page.php:221
+msgid "🎁 Free Delivery"
+msgstr "🎁 توصيل مجاني"
+
+#: admin/admin-page.php:236
+msgid "Are you sure you want to reset all settings to default?"
+msgstr "هل أنت متأكد من أنك تريد إعادة تعيين جميع الإعدادات إلى الوضع الافتراضي؟"
+
+#: admin/admin-page.php:237
+msgid "🔄 Reset to Default"
+msgstr "🔄 إعادة التعيين إلى الافتراضي"
+
+#: includes/form-handler.php:131
+msgid "Delivery Type"
+msgstr "نوع التوصيل"
+
+#: includes/form-handler.php:131
+msgid "Home Delivery"
+msgstr "التوصيل إلى المنزل"
+
+#: includes/form-handler.php:131
+msgid "Office Delivery"
+msgstr "التوصيل إلى المكتب"
+
+#: includes/form-handler.php:132
+msgid "Delivery Price"
+msgstr "سعر التوصيل"
+
+#: includes/form-handler.php:132
+msgid "Free"
+msgstr "مجاني"

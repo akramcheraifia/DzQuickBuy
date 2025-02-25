@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@media (max-width: 420px) {
+    #ast-mobile-popup .ast-mobile-popup-inner {
+        margin-left: 0px;
+        width: 280px;
+        max-width: 280px;
+    }
+}
+body, html, p, h1, h2, h3, h4, h5, h6, a:not(#wpadminbar *), 
+span:not(#wpadminbar *), div:not(#wpadminbar *), 
+button, input, textarea {
+    font-family: 'Cairo', sans-serif !important;
+}
+.products .product .ahfb-svg-iconset {
+    display: none;
+}
+
+.products .product .ast-onsale-card {
+    display: none;
+}
+
+
+.ast-woocommerce-container .product .ast-onsale-card {
+    display: none;
+}
+/* Enlarge product image */
+.single-product .product .images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add a slight border radius for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.products .product .button {
+    background-color: var(--button-bg); /* Blue background color */
+    color: var(--button-text); /* Text color */
+    border: none; /* Remove default button border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+.products .product .button:hover {
+    background-color: white; /* White background color on hover */
+    border: 2px solid var(--button-bg); /* Blue border on hover */
+    color: var(--button-bg); /* Blue text color on hover */
+}
+
+
+.products .product .button {
+    border-radius: 5px; /* Border radius for all corners */
+}
+.astra-shop-summary-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* Add a border to the products */
+ul.products li.product {
+    padding-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 5px 20px -10px rgba(0,0,0,0.15);
+    transition: .25s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the product title */
+ul.products li.product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333; /* Text color */
+}
+
+/* Style the product price */
+ul.products li.product span.price {
+    display: block;
+    font-size: 16px;
+    color: var(--button-bg) ; /* Price color */
+}
+
+.woocommerce-loop-product__title {
+    text-align: center;
+}
+
+.woocommerce-Price-amount.amount {
+    text-align: center;
+}
+
+.woocommerce-loop-product__title::after {
+    content: '\A ★★★★★'; 
+    display: block;
+    color: #F2BB13;
+    font-size: 20px;
+}
+
+.ast-article-single {}
+
+span.price {
+    text-align: center !important;
+}
+
+.add_to_cart_button {
+    border-radius: 5px !important;
+}
+
+.elementor-shortcode .products li {
+    padding-bottom: 10px !important;
+}
+
+
+.woocommerce-product-gallery ul li {
+    display: none;
+  }
+/* Change store prices color in WooCommerce */
+.woocommerce-Price-amount {
+    color: black !important;
+}
+html, body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden; 
+}  
+ /* ✅ Customize Menu Colors */
+ .site-header, .main-navigation, .ast-primary-header-bar {
+    background-color: white !important;
+}
+.main-navigation a, .ast-primary-header-bar .main-header-menu a {
+    color: black !important;
+}
+.main-navigation a:hover, .ast-primary-header-bar .main-header-menu a:hover {
+    opacity: 0.8;
+    color: var(--button-bg) !important;
+}
+
+/* 🟢 Style for the 'View All Products' Button */
+a.elementor-button.elementor-button-link {
+    background-color: var(--button-bg); /* Default Green */
+    color:var(--button-text); /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    text-decoration: none;
+}
+
+/* 🟢 Hover Effect */
+a.elementor-button.elementor-button-link:hover {
+    background-color: white;
+    color: var(--button-bg);
+    border: 2px solid var(--button-bg);
+}
+/* ✅ Change the color when the user selects text */
+::selection {
+    background-color: color-mix(in srgb, var(--button-bg) 70%, transparent);
+    color: black;
+}
+
+
+/* ✅ Hover Effect for Links */
+a:hover {
+    color: var(--button-bg) !important; /* Change this to any color you want */    
+}
+.dqb-store-notice-container {
+    background-color: var(--button-bg);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    height: 50px; /* Fixed height to prevent jumping */
+}
+
+.dqb-store-notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.dqb-store-notice-item {
+    display: none;
+    font-size: 16px;
+}
+
+
+
+/* 🟢 Responsive Fix */
+@media (max-width: 768px) {
+    .dqb-store-notice {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

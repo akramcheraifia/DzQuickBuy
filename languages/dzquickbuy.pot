@@ -1,0 +1,169 @@
+# Copyright (C) 2025 Akram Cheraifia
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Quick Order Form 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/akram plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-02-25T11:10:38+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: dzquickbuy\n"
+
+#. Plugin Name of the plugin
+#: wc-quick-order.php
+msgid "WooCommerce Quick Order Form"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: wc-quick-order.php
+msgid "https://yourwebsite.com"
+msgstr ""
+
+#. Description of the plugin
+#: wc-quick-order.php
+msgid "Adds a quick order form on product pages with customizable UI."
+msgstr ""
+
+#. Author of the plugin
+#: wc-quick-order.php
+msgid "Akram Cheraifia"
+msgstr ""
+
+#: admin/admin-page.php:11
+msgid "DzQuickBuy Settings"
+msgstr ""
+
+#: admin/admin-page.php:14
+msgid "✅ All settings have been reset to default!"
+msgstr ""
+
+#: admin/admin-page.php:19
+#: admin/admin-page.php:32
+msgid "🔤 Titles"
+msgstr ""
+
+#: admin/admin-page.php:20
+#: admin/admin-page.php:76
+msgid "🎨 Colors"
+msgstr ""
+
+#: admin/admin-page.php:21
+#: admin/admin-page.php:99
+msgid "⚙️ Settings"
+msgstr ""
+
+#: admin/admin-page.php:22
+#: admin/admin-page.php:120
+msgid "🚫 Spam Protection"
+msgstr ""
+
+#: admin/admin-page.php:23
+#: admin/admin-page.php:137
+msgid "🚚 Shipping Prices"
+msgstr ""
+
+#: admin/admin-page.php:35
+msgid "Place Order Button Text:"
+msgstr ""
+
+#: admin/admin-page.php:41
+msgid "Name Placeholder:"
+msgstr ""
+
+#: admin/admin-page.php:47
+msgid "Phone Placeholder:"
+msgstr ""
+
+#: admin/admin-page.php:53
+msgid "State Placeholder:"
+msgstr ""
+
+#: admin/admin-page.php:59
+msgid "Information text:"
+msgstr ""
+
+#: admin/admin-page.php:64
+msgid "Store Notices (One per Line):"
+msgstr ""
+
+#: admin/admin-page.php:79
+msgid "Main Color:"
+msgstr ""
+
+#: admin/admin-page.php:84
+msgid "Button Text Color:"
+msgstr ""
+
+#: admin/admin-page.php:89
+msgid "Form Border Color:"
+msgstr ""
+
+#: admin/admin-page.php:102
+msgid "Phone Number:"
+msgstr ""
+
+#: admin/admin-page.php:107
+msgid "WhatsApp Number:"
+msgstr ""
+
+#: admin/admin-page.php:112
+msgid "Thank You Page URL:"
+msgstr ""
+
+#: admin/admin-page.php:123
+msgid "Order Limit Per IP:"
+msgstr ""
+
+#: admin/admin-page.php:128
+msgid "Ban Duration (in minutes):"
+msgstr ""
+
+#: admin/admin-page.php:208
+msgid "🚚 "
+msgstr ""
+
+#: admin/admin-page.php:210
+msgid "🏠 Home Delivery:"
+msgstr ""
+
+#: admin/admin-page.php:214
+msgid "🏢 Office Delivery:"
+msgstr ""
+
+#: admin/admin-page.php:221
+msgid "🎁 Free Delivery"
+msgstr ""
+
+#: admin/admin-page.php:236
+msgid "Are you sure you want to reset all settings to default?"
+msgstr ""
+
+#: admin/admin-page.php:237
+msgid "🔄 Reset to Default"
+msgstr ""
+
+#: includes/form-handler.php:131
+msgid "Delivery Type"
+msgstr ""
+
+#: includes/form-handler.php:131
+msgid "Home Delivery"
+msgstr ""
+
+#: includes/form-handler.php:131
+msgid "Office Delivery"
+msgstr ""
+
+#: includes/form-handler.php:132
+msgid "Delivery Price"
+msgstr ""
+
+#: includes/form-handler.php:132
+msgid "Free"
+msgstr ""

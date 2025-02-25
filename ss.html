@@ -1,197 +1,0 @@
-<!-- 
-  <form class="wooecom_instant_order" id="wooecom_instant_order" method="post">
-    <div class="wooecom_instant_order_form">
-      <p class="wooecom_notice hidden">قم بإدخال المعلومات ثم إرسال الطلب</p>
-      <p class="wooecom_information_title">
-        يمكنكم القيام بطلب عبر النموذج التالي أو الإتصال بنا على الرقم
-        0123456789
-      </p>
-      <input
-        type="text"
-        name="wooecom_name"
-        id="wooecom_name"
-        placeholder="👦🏻 الاسم الكامل"
-        required=""
-      />
-      <input
-        type="tel"
-        name="wooecom_phone"
-        id="wooecom_phone"
-        pattern="[0-9]+"
-        placeholder="رقم الهاتف 📞"
-        required=""
-      />
-      <input
-        type="text"
-        name="wooecom_address"
-        id="wooecom_address"
-        placeholder="🌎 العنوان الكامل"
-        required=""
-      />
-      <select
-        name="wooecom_state"
-        id="wooecom_state"
-        placeholder="🏠 الولاية / المنطقة"
-        required=""
-      >
-        <option value="">🏠 الولاية / المنطقة</option>
-        <option value="DZ-01">01 Adrar - أدرار</option>
-        <option value="DZ-02">02 Chlef - الشلف</option>
-        <option value="DZ-03">03 Laghouat - الأغواط</option>
-        <option value="DZ-04">04 Oum El Bouaghi - أم البواقي</option>
-        <option value="DZ-05">05 Batna - باتنة</option>
-        <option value="DZ-06">06 Béjaïa - بجاية</option>
-        <option value="DZ-07">07 Biskra - بسكرة</option>
-        <option value="DZ-08">08 Bechar - بشار</option>
-        <option value="DZ-09">09 Blida - البليدة</option>
-        <option value="DZ-10">10 Bouira - البويرة</option>
-        <option value="DZ-11">11 Tamanrasset - تمنراست</option>
-        <option value="DZ-12">12 Tébessa - تبسة</option>
-        <option value="DZ-13">13 Tlemcene - تلمسان</option>
-        <option value="DZ-14">14 Tiaret - تيارت</option>
-        <option value="DZ-15">15 Tizi Ouzou - تيزي وزو</option>
-        <option value="DZ-16">16 Alger - الجزائر</option>
-        <option value="DZ-17">17 Djelfa - الجلفة</option>
-        <option value="DZ-18">18 Jijel - جيجل</option>
-        <option value="DZ-19">19 Sétif - سطيف</option>
-        <option value="DZ-20">20 Saïda - سعيدة</option>
-        <option value="DZ-21">21 Skikda - سكيكدة</option>
-        <option value="DZ-22">22 Sidi Bel Abbès - سيدي بلعباس</option>
-        <option value="DZ-23">23 Annaba - عنابة</option>
-        <option value="DZ-24">24 Guelma - قالمة</option>
-        <option value="DZ-25">25 Constantine - قسنطينة</option>
-        <option value="DZ-26">26 Médéa - المدية</option>
-        <option value="DZ-27">27 Mostaganem - مستغانم</option>
-        <option value="DZ-28">28 MSila - مسيلة</option>
-        <option value="DZ-29">29 Mascara - معسكر</option>
-        <option value="DZ-30">30 Ouargla - ورقلة</option>
-        <option value="DZ-31">31 Oran - وهران</option>
-        <option value="DZ-32">32 El Bayadh - البيض</option>
-        <option value="DZ-33">33 Illizi - إليزي</option>
-        <option value="DZ-34">34 Bordj Bou Arreridj - برج بوعريريج</option>
-        <option value="DZ-35">35 Boumerdès - بومرداس</option>
-        <option value="DZ-36">36 El Tarf - الطارف</option>
-        <option value="DZ-37">37 Tindouf - تندوف</option>
-        <option value="DZ-38">38 Tissemsilt - تيسمسيلت</option>
-        <option value="DZ-39">39 Eloued - الوادي</option>
-        <option value="DZ-40">40 Khenchela - خنشلة</option>
-        <option value="DZ-41">41 Souk Ahras - سوق أهراس</option>
-        <option value="DZ-42">42 Tipaza - تيبازة</option>
-        <option value="DZ-43">43 Mila - ميلة</option>
-        <option value="DZ-44">44 Aïn Defla - عين الدفلى</option>
-        <option value="DZ-45">45 Naâma - النعامة</option>
-        <option value="DZ-46">46 Aïn Témouchent - عين تموشنت</option>
-        <option value="DZ-47">47 Ghardaïa - غرداية</option>
-        <option value="DZ-48">48 Relizane- غليزان</option>
-        <option value="DZ-49">49 Timimoun - تيميمون</option>
-        <option value="DZ-50">50 Bordj Baji Mokhtar - برج باجي مختار</option>
-        <option value="DZ-51">51 Ouled Djellal - أولاد جلال</option>
-        <option value="DZ-52">52 Béni Abbès - بني عباس</option>
-        <option value="DZ-53">53 Aïn Salah - عين صالح</option>
-        <option value="DZ-54">54 In Guezzam - عين قزام</option>
-        <option value="DZ-55">55 Touggourt - تقرت</option>
-        <option value="DZ-56">56 Djanet - جانت</option>
-        <option value="DZ-57">57 El MGhair - المغير</option>
-        <option value="DZ-58">58 El Menia - المنيعة</option></select
-      ><select
-        name="wooecom_city"
-        id="wooecom_city"
-        class="select"
-        data-placeholder="📍 البلدية"
-        required="required"
-      >
-        <option value="">📍 البلدية</option>
-      </select>
-      <input type="hidden" value="360" id="wooecom_product_id" />
-      <div class="wooecom_placeholder"></div>
-      <div class="wooecom_quantity">
-        <span class="wooecom_minus"><i class="fa-solid fa-minus"></i></span>
-        <input
-          type="number"
-          value="1"
-          min="1"
-          name="wooecom_qty"
-          id="wooecom_qty"
-          required=""
-          readonly=""
-        />
-        <span class="wooecom_plus"><i class="fa-solid fa-plus"></i></span>
-      </div>
-      <button type="submit" class="wooecom_checkout">
-        <span>اطلب الان</span>
-        <span class="wooecom_btn_loader"></span>
-      </button>
-    </div>
-    <div class="wooecom_order_summary active">
-      <div class="wooecom_order_summary_head">
-        <div class="wooecom_order_summary_title">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span>ملخص الطلب</span>
-        </div>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-      <div class="wooecom_price_table">
-        <div class="order_loader_container style-Cn1HT" id="style-Cn1HT">
-          <span class="wooecom_order_loader"></span>
-        </div>
-        <table>
-          <tbody>
-            <tr>
-              <td class="product_name">
-                جهاز لوحي للكتابة والرسم (افضل هدية للدخول المدرسي)
-              </td>
-              <td class="product_price">
-                <span class="wooecom_order_qty">x1</span
-                ><span class="wooecom_price">د.ج 300</span>
-                <input type="hidden" id="wooecom_price" value="300" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                سعر الشحن
-                <div class="wooecom_shipping_prices">
-                  <ul class="wooecom_shipping_methods"></ul>
-                </div>
-              </td>
-              <td class="shipping_price">اختر المنطقة</td>
-            </tr>
-            <tr
-              class="wooecom_coupon_discount_row style-aPkr4"
-              id="style-aPkr4"
-            >
-              <td>الكوبون</td>
-              <td class="coupon_discount">
-                <span class="wooecom_discount_amount"
-                  >-<span class="woocommerce-Price-amount amount"
-                    ><bdi
-                      ><span class="woocommerce-Price-currencySymbol">د.ج</span
-                      >&nbsp;0</bdi
-                    ></span
-                  ></span
-                >
-              </td>
-            </tr>
-            <tr class="wooecom_row_total_price">
-              <td>السعر الإجمالي</td>
-              <td class="total_price">
-                <span class="wooecom_price">د.ج 300</span>
-                <input type="hidden" id="wooecom_total_price" value="300" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </form>
-  <div class="wooecom_sticky_footer style-ls8jT" id="style-ls8jT">
-    <a href="#wooecom_instant_order" class="wooecom_buy_now">اشتري الان</a>
-    <div class="wooecom_footer_icons">
-      <a href="tel:+213561571407" class="href">
-        <i class="fa-solid fa-phone"></i>
-      </a>
-      <a target="_blank" href="https://wa.me/+213561571407" class="href">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-    </div>
-  </div>
-</div> -->

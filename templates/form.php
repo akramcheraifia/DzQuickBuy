@@ -1,86 +1,200 @@
-<form class="wooecom_instant_order" id="wooecom_instant_order">
-    <div class="wooecom_instant_order_form">
-        <p class="wooecom_notice hidden">قم بإدخال المعلومات ثم إرسال الطلب</p>
-        <p class="wooecom_information_title">
-            يمكنكم القيام بطلب عبر النموذج التالي أو الإتصال بنا على الرقم 0123456789
+<style>
+    .dqb_instant_order_form {
+        margin-bottom: 20px;
+    }
+
+    .dqb_checkout {
+        background:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+        color:
+            <?php echo get_option('wcqof_button_text_color', '#ffffff'); ?>
+            !important;
+    }
+
+    /* Apply to both form and product summary */
+    .delivery-section,
+    .dqb_instant_order_form {
+        border: 2px solid
+            <?php echo get_option('wcqof_form_border_color', '#dddddd'); ?>
+            !important;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    /* Apply to all borders inside the product summary */
+    .dqb_order_summary table,
+    .dqb_order_summary_head,
+    .dqb_order_summary th,
+    .dqb_order_summary td,
+    .dqb_order_summary tr {
+        border: 1px solid
+            <?php echo get_option('wcqof_form_border_color', '#dddddd'); ?>
+            !important;
+        border-radius: 8px !important;
+    }
+
+    .dqb_instant_order_form input,
+    .dqb_instant_order_form select {
+        border: 1.5px solid
+            <?php echo get_option('wcqof_form_border_color', '#dddddd'); ?>
+            !important;
+    }
+
+    .dqb_sticky_footer .dqb_buy_now {
+        background:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+        color:
+            <?php echo get_option('wcqof_button_text_color', '#ffffff'); ?>
+            !important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .dqb_footer_icons i {
+        color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+        font-size: 30px;
+        margin: 0 5px;
+    }
+
+
+    .delivery-price,
+    .dqb_order_summary i,
+    .dqb_order_summary span,
+    .dqb_order_qty,
+    .dqb_order_summary .total_price,
+    .dqb_row_total_price td {
+        color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+    }
+
+    .dqb_order_qty {
+        background: none !important;
+    }
+
+    .delivery-option:hover {
+        border-color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+    }
+
+    .delivery-option input[type="radio"] {
+        border: 1px solid
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+    }
+
+    .dqb_checkout:hover {
+        color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+        background: #fff !important;
+        border-color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+    }
+
+    .dqb_buy_now:hover {
+        color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+        background: #fff !important;
+        border-color:
+            <?php echo get_option('wcqof_product_summary_color', '#000000'); ?>
+            !important;
+    }
+</style>
+
+
+
+<form class="dqb_instant_order" id="dqb_instant_order">
+    <div class="dqb_instant_order_form">
+        <div id="dqb_message_box" class="dqb_hidden"></div>
+        <p class="dqb_notice hidden">قم بإدخال المعلومات ثم إرسال الطلب</p>
+        <p class="dqb_information_title">
+            <?php echo get_option('wcqof_name_info_title', 'يمكنكم القيام بطلب عبر النموذج التالي أو الإتصال بنا على الرقم 0123456789'); ?>
+
         </p>
-        <input type="text" name="wooecom_name" id="wooecom_name" placeholder="👦🏻 الاسم الكامل" required="" />
-        <input type="tel" name="wooecom_phone" id="wooecom_phone" pattern="[0-9]+" placeholder="رقم الهاتف 📞"
-            required="" />
-        <select name="wooecom_state" id="wooecom_state" placeholder="🏠 الولاية / المنطقة" required="">
-            <option value="">🏠 الولاية / المنطقة</option>
-            <option value="DZ-01">01 Adrar - أدرار</option>
-            <option value="DZ-02">02 Chlef - الشلف</option>
-            <option value="DZ-03">03 Laghouat - الأغواط</option>
-            <option value="DZ-04">04 Oum El Bouaghi - أم البواقي</option>
-            <option value="DZ-05">05 Batna - باتنة</option>
-            <option value="DZ-06">06 Béjaïa - بجاية</option>
-            <option value="DZ-07">07 Biskra - بسكرة</option>
-            <option value="DZ-08">08 Bechar - بشار</option>
-            <option value="DZ-09">09 Blida - البليدة</option>
-            <option value="DZ-10">10 Bouira - البويرة</option>
-            <option value="DZ-11">11 Tamanrasset - تمنراست</option>
-            <option value="DZ-12">12 Tébessa - تبسة</option>
-            <option value="DZ-13">13 Tlemcene - تلمسان</option>
-            <option value="DZ-14">14 Tiaret - تيارت</option>
-            <option value="DZ-15">15 Tizi Ouzou - تيزي وزو</option>
-            <option value="DZ-16">16 Alger - الجزائر</option>
-            <option value="DZ-17">17 Djelfa - الجلفة</option>
-            <option value="DZ-18">18 Jijel - جيجل</option>
-            <option value="DZ-19">19 Sétif - سطيف</option>
-            <option value="DZ-20">20 Saïda - سعيدة</option>
-            <option value="DZ-21">21 Skikda - سكيكدة</option>
-            <option value="DZ-22">22 Sidi Bel Abbès - سيدي بلعباس</option>
-            <option value="DZ-23">23 Annaba - عنابة</option>
-            <option value="DZ-24">24 Guelma - قالمة</option>
-            <option value="DZ-25">25 Constantine - قسنطينة</option>
-            <option value="DZ-26">26 Médéa - المدية</option>
-            <option value="DZ-27">27 Mostaganem - مستغانم</option>
-            <option value="DZ-28">28 MSila - مسيلة</option>
-            <option value="DZ-29">29 Mascara - معسكر</option>
-            <option value="DZ-30">30 Ouargla - ورقلة</option>
-            <option value="DZ-31">31 Oran - وهران</option>
-            <option value="DZ-32">32 El Bayadh - البيض</option>
-            <option value="DZ-33">33 Illizi - إليزي</option>
-            <option value="DZ-34">34 Bordj Bou Arreridj - برج بوعريريج</option>
-            <option value="DZ-35">35 Boumerdès - بومرداس</option>
-            <option value="DZ-36">36 El Tarf - الطارف</option>
-            <option value="DZ-37">37 Tindouf - تندوف</option>
-            <option value="DZ-38">38 Tissemsilt - تيسمسيلت</option>
-            <option value="DZ-39">39 Eloued - الوادي</option>
-            <option value="DZ-40">40 Khenchela - خنشلة</option>
-            <option value="DZ-41">41 Souk Ahras - سوق أهراس</option>
-            <option value="DZ-42">42 Tipaza - تيبازة</option>
-            <option value="DZ-43">43 Mila - ميلة</option>
-            <option value="DZ-44">44 Aïn Defla - عين الدفلى</option>
-            <option value="DZ-45">45 Naâma - النعامة</option>
-            <option value="DZ-46">46 Aïn Témouchent - عين تموشنت</option>
-            <option value="DZ-47">47 Ghardaïa - غرداية</option>
-            <option value="DZ-48">48 Relizane- غليزان</option>
-            <option value="DZ-49">49 Timimoun - تيميمون</option>
-            <option value="DZ-50">50 Bordj Baji Mokhtar - برج باجي مختار</option>
-            <option value="DZ-51">51 Ouled Djellal - أولاد جلال</option>
-            <option value="DZ-52">52 Béni Abbès - بني عباس</option>
-            <option value="DZ-53">53 Aïn Salah - عين صالح</option>
-            <option value="DZ-54">54 In Guezzam - عين قزام</option>
-            <option value="DZ-55">55 Touggourt - تقرت</option>
-            <option value="DZ-56">56 Djanet - جانت</option>
-            <option value="DZ-57">57 El MGhair - المغير</option>
-            <option value="DZ-58">58 El Menia - المنيعة</option>
+        <input type="text" name="dqb_name" id="dqb_name"
+            placeholder="<?php echo get_option('wcqof_name_placeholder', '👦🏻 الاسم الكامل'); ?>" required=""
+            maxlength="30" />
+        <input type="tel" name="dqb_phone" id="dqb_phone" pattern="[0-9]+"
+            placeholder="<?php echo get_option('wcqof_phone_placeholder', 'رقم الهاتف 📞'); ?>" required=""
+            maxlength="14" />
+        <select name="dqb_state" id="dqb_state" class="dqb_select"
+            placeholder="<?php echo get_option('wcqof_state_placeholder', '🏠 الولاية / المنطقة'); ?>" required="">
+
+            <option value=""><?php echo get_option('wcqof_state_placeholder', '🏠 الولاية / المنطقة'); ?></option>
+            <option value="Adrar-01">01 Adrar - أدرار</option>
+            <option value="Chlef-02">02 Chlef - الشلف</option>
+            <option value="Laghouat-03">03 Laghouat - الأغواط</option>
+            <option value="Oum El Bouaghi-04">04 Oum El Bouaghi - أم البواقي</option>
+            <option value="Batna-05">05 Batna - باتنة</option>
+            <option value="Béjaïa-06">06 Béjaïa - بجاية</option>
+            <option value="Biskra-07">07 Biskra - بسكرة</option>
+            <option value="Bechar-08">08 Bechar - بشار</option>
+            <option value="Blida-09">09 Blida - البليدة</option>
+            <option value="Bouira-10">10 Bouira - البويرة</option>
+            <option value="Tamanrasset-11">11 Tamanrasset - تمنراست</option>
+            <option value="Tébessa-12">12 Tébessa - تبسة</option>
+            <option value="Tlemcen-13">13 Tlemcen - تلمسان</option>
+            <option value="Tiaret-14">14 Tiaret - تيارت</option>
+            <option value="Tizi Ouzou-15">15 Tizi Ouzou - تيزي وزو</option>
+            <option value="Alger-16">16 Alger - الجزائر</option>
+            <option value="Djelfa-17">17 Djelfa - الجلفة</option>
+            <option value="Jijel-18">18 Jijel - جيجل</option>
+            <option value="Sétif-19">19 Sétif - سطيف</option>
+            <option value="Saïda-20">20 Saïda - سعيدة</option>
+            <option value="Skikda-21">21 Skikda - سكيكدة</option>
+            <option value="Sidi Bel Abbès-22">22 Sidi Bel Abbès - سيدي بلعباس</option>
+            <option value="Annaba-23">23 Annaba - عنابة</option>
+            <option value="Guelma-24">24 Guelma - قالمة</option>
+            <option value="Constantine-25">25 Constantine - قسنطينة</option>
+            <option value="Médéa-26">26 Médéa - المدية</option>
+            <option value="Mostaganem-27">27 Mostaganem - مستغانم</option>
+            <option value="MSila-28">28 MSila - مسيلة</option>
+            <option value="Mascara-29">29 Mascara - معسكر</option>
+            <option value="Ouargla-30">30 Ouargla - ورقلة</option>
+            <option value="Oran-31">31 Oran - وهران</option>
+            <option value="El Bayadh-32">32 El Bayadh - البيض</option>
+            <option value="Illizi-33">33 Illizi - إليزي</option>
+            <option value="Bordj Bou Arreridj-34">34 Bordj Bou Arreridj - برج بوعريريج</option>
+            <option value="Boumerdès-35">35 Boumerdès - بومرداس</option>
+            <option value="El Tarf-36">36 El Tarf - الطارف</option>
+            <option value="Tindouf-37">37 Tindouf - تندوف</option>
+            <option value="Tissemsilt-38">38 Tissemsilt - تيسمسيلت</option>
+            <option value="El Oued-39">39 El Oued - الوادي</option>
+            <option value="Khenchela-40">40 Khenchela - خنشلة</option>
+            <option value="Souk Ahras-41">41 Souk Ahras - سوق أهراس</option>
+            <option value="Tipaza-42">42 Tipaza - تيبازة</option>
+            <option value="Mila-43">43 Mila - ميلة</option>
+            <option value="Aïn Defla-44">44 Aïn Defla - عين الدفلى</option>
+            <option value="Naâma-45">45 Naâma - النعامة</option>
+            <option value="Aïn Témouchent-46">46 Aïn Témouchent - عين تموشنت</option>
+            <option value="Ghardaïa-47">47 Ghardaïa - غرداية</option>
+            <option value="Relizane-48">48 Relizane - غليزان</option>
+            <option value="Timimoun-49">49 Timimoun - تيميمون</option>
+            <option value="Bordj Baji Mokhtar-50">50 Bordj Baji Mokhtar - برج باجي مختار</option>
+            <option value="Ouled Djellal-51">51 Ouled Djellal - أولاد جلال</option>
+            <option value="Béni Abbès-52">52 Béni Abbès - بني عباس</option>
+            <option value="Aïn Salah-53">53 Aïn Salah - عين صالح</option>
+            <option value="In Guezzam-54">54 In Guezzam - عين قزام</option>
+            <option value="Touggourt-55">55 Touggourt - تقرت</option>
+            <option value="Djanet-56">56 Djanet - جانت</option>
+            <option value="El Mghair-57">57 El Mghair - المغير</option>
+            <option value="El Menia-58">58 El Menia - المنيعة</option>
+
         </select>
-        <!-- <select
-      name="wooecom_city"
-      id="wooecom_city"
-      class="select"
-      data-placeholder="📍 البلدية"
-      required="required"
-    >
-      <option value="">📍 البلدية</option>
-    </select> -->
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 var cities = {
-                    "DZ-01": [
+                    "Adrar-01": [
                         "Adrar",
                         "Tamest",
                         "Charouine",
@@ -110,7 +224,7 @@
                         "Ouled Aissa",
                         "Timiaouine",
                     ],
-                    "DZ-02": [
+                    "Chlef-02": [
                         "Chlef",
                         "Tenes",
                         "Benairia",
@@ -147,7 +261,7 @@
                         "Breira",
                         "Ben Boutaleb",
                     ],
-                    "DZ-03": [
+                    "Laghouat-03": [
                         "Laghouat",
                         "Ksar El Hirane",
                         "Benacer Ben Chohra",
@@ -173,7 +287,7 @@
                         "El Haouaita",
                         "Sidi Bouzid",
                     ],
-                    "DZ-04": [
+                    "Oum El Bouaghi-04": [
                         "Oum El Bouaghi",
                         "Ain Beida",
                         "Ainmlila",
@@ -204,7 +318,7 @@
                         "Ouled Gacem",
                         "El Harmilia",
                     ],
-                    "DZ-05": [
+                    "Batna-05": [
                         "Batna",
                         "Ghassira",
                         "Maafa",
@@ -267,7 +381,7 @@
                         "Boulhilat",
                         "Larbaa",
                     ],
-                    "DZ-06": [
+                    "Béjaïa-06": [
                         "Bejaia",
                         "Amizour",
                         "Ferraoun",
@@ -321,7 +435,7 @@
                         "Oued Ghir",
                         "Boudjellil",
                     ],
-                    "DZ-07": [
+                    "Biskra-07": [
                         "Biskra",
                         "Oumache",
                         "Branis",
@@ -356,7 +470,7 @@
                         "El Hadjab",
                         "Khanguet Sidinadji",
                     ],
-                    "DZ-08": [
+                    "Bechar-08": [
                         "Bechar",
                         "Erg Ferradj",
                         "Ouled Khoudir",
@@ -379,7 +493,7 @@
                         "Tamtert",
                         "Beni Ounif",
                     ],
-                    "DZ-09": [
+                    "Blida-09": [
                         "Blida",
                         "Chebli",
                         "Bouinan",
@@ -406,7 +520,7 @@
                         "Ain Romana",
                         "Djebabra",
                     ],
-                    "DZ-10": [
+                    "Bouira-10": [
                         "Bouira",
                         "El Asnam",
                         "Guerrouma",
@@ -453,7 +567,7 @@
                         "El Mokrani",
                         "Oued El Berdi",
                     ],
-                    "DZ-11": [
+                    "Tamanrasset-11": [
                         "Tamanghasset",
                         "Abalessa",
                         "In Ghar",
@@ -465,7 +579,7 @@
                         "In Amguel",
                         "Foggaret Ezzaouia",
                     ],
-                    "DZ-12": [
+                    "Tébessa-12": [
                         "Tebessa",
                         "Bir El Ater",
                         "Cheria",
@@ -495,7 +609,7 @@
                         "El Mazeraa",
                         "Ferkane",
                     ],
-                    "DZ-13": [
+                    "Tlemcen-13": [
                         "Tlemcen",
                         "Beni Mester",
                         "Ain Tallout",
@@ -550,7 +664,7 @@
                         "Beni Semiel",
                         "Ain Kebira",
                     ],
-                    "DZ-14": [
+                    "Tiaret-14": [
                         "Tiaret",
                         "Medroussa",
                         "Ain Bouchekif",
@@ -594,7 +708,7 @@
                         "Faidja",
                         "Tidda",
                     ],
-                    "DZ-15": [
+                    "Tizi Ouzou-15": [
                         "Tizi Ouzou",
                         "Ain El Hammam",
                         "Akbil",
@@ -663,7 +777,7 @@
                         "Assi Youcef",
                         "Ait Toudert",
                     ],
-                    "DZ-16": [
+                    "Alger-16": [
                         "Alger Centre",
                         "Sidi Mhamed",
                         "El Madania",
@@ -722,7 +836,7 @@
                         "Khracia",
                         "Saoula",
                     ],
-                    "DZ-17": [
+                    "Djelfa-17": [
                         "Djelfa",
                         "Moudjebara",
                         "El Guedid",
@@ -760,7 +874,7 @@
                         "Ain Fekka",
                         "Tadmit",
                     ],
-                    "DZ-18": [
+                    "Jijel-18": [
                         "Jijel",
                         "Erraguene",
                         "El Aouana",
@@ -790,7 +904,7 @@
                         "Ouled Rabah",
                         "Ouadjana",
                     ],
-                    "DZ-19": [
+                    "Sétif-19": [
                         "Setif",
                         "Ain El Kebira",
                         "Beni Aziz",
@@ -852,7 +966,7 @@
                         "El Ouldja",
                         "Tella",
                     ],
-                    "DZ-20": [
+                    "Saïda-20": [
                         "Saida",
                         "Doui Thabet",
                         "Ain El Hadjar",
@@ -870,7 +984,7 @@
                         "Tircine",
                         "Ain Soltane",
                     ],
-                    "DZ-21": [
+                    "Skikda-21": [
                         "Skikda",
                         "Ain Zouit",
                         "El Hadaik",
@@ -910,7 +1024,7 @@
                         "Hamadi Krouma",
                         "El Marsa",
                     ],
-                    "DZ-22": [
+                    "Sidi Bel Abbès-22": [
                         "Sidi Bel Abbes",
                         "Tessala",
                         "Sidi Brahim",
@@ -964,7 +1078,7 @@
                         "Benachiba Chelia",
                         "Hassi Dahou",
                     ],
-                    "DZ-23": [
+                    "Annaba-23": [
                         "Annaba",
                         "Berrahel",
                         "El Hadjar",
@@ -978,7 +1092,7 @@
                         "Sidi Amer",
                         "Treat",
                     ],
-                    "DZ-24": [
+                    "Guelma-24": [
                         "Guelma",
                         "Nechmaya",
                         "Bouati Mahmoud",
@@ -1014,7 +1128,7 @@
                         "Oued Cheham",
                         "Djeballah Khemissi",
                     ],
-                    "DZ-25": [
+                    "Constantine-25": [
                         "Constantine",
                         "Hamma Bouziane",
                         "El Haria",
@@ -1028,7 +1142,7 @@
                         "Mesaoud Boudjeriou",
                         "Ibn Ziad",
                     ],
-                    "DZ-26": [
+                    "Médéa-26": [
                         "Medea",
                         "Ouzera",
                         "Ouled Maaref",
@@ -1094,7 +1208,7 @@
                         "Khams Djouamaa",
                         "Saneg",
                     ],
-                    "DZ-27": [
+                    "Mostaganem-27": [
                         "Mostaganem",
                         "Sayada",
                         "Fornaka",
@@ -1128,7 +1242,7 @@
                         "Touahria",
                         "El Hassiane",
                     ],
-                    "DZ-28": [
+                    "MSila-28": [
                         "Msila",
                         "Maadid",
                         "Hammam Dhalaa",
@@ -1177,7 +1291,7 @@
                         "Oultene",
                         "Djebel Messaad",
                     ],
-                    "DZ-29": [
+                    "Mascara-29": [
                         "Mascara",
                         "Bou Hanifia",
                         "Tizi",
@@ -1226,7 +1340,7 @@
                         "Sidi Abdeldjebar",
                         "Sehailia",
                     ],
-                    "DZ-30": [
+                    "Ouargla-30": [
                         "Ouargla",
                         "Ain Beida",
                         "Ngoussa",
@@ -1249,7 +1363,7 @@
                         "El Allia",
                         "El Borma",
                     ],
-                    "DZ-31": [
+                    "Oran-31": [
                         "Oran",
                         "Gdyel",
                         "Bir El Djir",
@@ -1277,7 +1391,7 @@
                         "Ain Kerma",
                         "Ain Biya",
                     ],
-                    "DZ-32": [
+                    "El Bayadh-32": [
                         "El Bayadh",
                         "Rogassa",
                         "Stitten",
@@ -1301,7 +1415,7 @@
                         "Sidi Slimane",
                         "Sidi Tifour",
                     ],
-                    "DZ-33": [
+                    "Illizi-33": [
                         "Illizi",
                         "Djanet",
                         "Debdeb",
@@ -1309,7 +1423,7 @@
                         "Bordj El Haouasse",
                         "In Amenas",
                     ],
-                    "DZ-34": [
+                    "Bordj Bou Arreridj-34": [
                         "Bordj Bou Arreridj",
                         "Ras El Oued",
                         "Bordj Zemoura",
@@ -1345,7 +1459,7 @@
                         "Rabta",
                         "Haraza",
                     ],
-                    "DZ-35": [
+                    "Boumerdès-35": [
                         "Boumerdes",
                         "Boudouaou",
                         "Afir",
@@ -1379,7 +1493,7 @@
                         "Khemis El Khechna",
                         "El Kharrouba",
                     ],
-                    "DZ-36": [
+                    "El Tarf-36": [
                         "El Tarf",
                         "Bouhadjar",
                         "Ben Mhidi",
@@ -1405,8 +1519,8 @@
                         "Hammam Beni Salah",
                         "Raml Souk",
                     ],
-                    "DZ-37": ["Tindouf", "Oum El Assel"],
-                    "DZ-38": [
+                    "Tindouf-37": ["Tindouf", "Oum El Assel"],
+                    "Tissemsilt-38": [
                         "Tissemsilt",
                         "Bordj Bou Naama",
                         "Theniet El Had",
@@ -1430,7 +1544,7 @@
                         "Boucaid",
                         "Beni Lahcene",
                     ],
-                    "DZ-39": [
+                    "El Oued-39": [
                         "El Oued",
                         "Robbah",
                         "Oued El Alenda",
@@ -1462,7 +1576,7 @@
                         "Oum Touyour",
                         "Sidi Amrane",
                     ],
-                    "DZ-40": [
+                    "Khenchela-40": [
                         "Khenchela",
                         "Mtoussa",
                         "Kais",
@@ -1485,7 +1599,7 @@
                         "Khirane",
                         "Chelia",
                     ],
-                    "DZ-41": [
+                    "Souk Ahras-41": [
                         "Souk Ahras",
                         "Sedrata",
                         "Hanancha",
@@ -1513,7 +1627,7 @@
                         "Terraguelt",
                         "Zouabi",
                     ],
-                    "DZ-42": [
+                    "Tipaza-42": [
                         "Tipaza",
                         "Menaceur",
                         "Larhat",
@@ -1543,7 +1657,7 @@
                         "Beni Milleuk",
                         "Hadjerat Ennous",
                     ],
-                    "DZ-43": [
+                    "Mila-43": [
                         "Mila",
                         "Ferdjioua",
                         "Chelghoum Laid",
@@ -1577,7 +1691,7 @@
                         "Yahia Beniguecha",
                         "Chigara",
                     ],
-                    "DZ-44": [
+                    "Aïn Defla-44": [
                         "Ain Defla",
                         "Miliana",
                         "Boumedfaa",
@@ -1615,7 +1729,7 @@
                         "Tiberkanine",
                         "Belaas",
                     ],
-                    "DZ-45": [
+                    "Naâma-45": [
                         "Naama",
                         "Mechria",
                         "Ain Sefra",
@@ -1629,7 +1743,7 @@
                         "Kasdir",
                         "El Biod",
                     ],
-                    "DZ-46": [
+                    "Aïn Témouchent-46": [
                         "Ain Temouchent",
                         "Chaabet El Ham",
                         "Ain Kihal",
@@ -1659,7 +1773,7 @@
                         "El Emir Abdelkader",
                         "El Messaid",
                     ],
-                    "DZ-47": [
+                    "Ghardaïa-47": [
                         "Ghardaia",
                         "El Meniaa",
                         "Dhayet Bendhahoua",
@@ -1674,7 +1788,7 @@
                         "Hassi Gara",
                         "Mansoura",
                     ],
-                    "DZ-48": [
+                    "Relizane-48": [
                         "Relizane",
                         "Oued Rhiou",
                         "Belaassel Bouzegza",
@@ -1714,7 +1828,7 @@
                         "Merdja Sidi Abed",
                         "Ouled Sidi Mihoub",
                     ],
-                    "DZ-49": [
+                    "Timimoun-49": [
                         "Timimoun",
                         "Charouine",
                         "Ksar Kaddour",
@@ -1726,8 +1840,8 @@
                         "Talmine",
                         "Ouled Aissa",
                     ],
-                    "DZ-50": ["B Badji Mokhtar", "Timiaouine"],
-                    "DZ-51": [
+                    "Bordj Baji Mokhtar-50": ["B Badji Mokhtar", "Timiaouine"],
+                    "Ouled Djellal-51": [
                         "Ouled Djellal",
                         "Sidi Khaled",
                         "Ras El Miad",
@@ -1735,7 +1849,7 @@
                         "Chaiba",
                         "Doucen",
                     ],
-                    "DZ-52": [
+                    "Béni Abbès-52": [
                         "Beni Abbes",
                         "Tamtert",
                         "Kerzaz",
@@ -1747,9 +1861,9 @@
                         "Ksabi",
                         "Igli",
                     ],
-                    "DZ-53": ["In Salah", "In Ghar", "Foggaret Azzaouia"],
-                    "DZ-54": ["In Guezzam", "Tinzaouatine"],
-                    "DZ-55": [
+                    "Aïn Salah-53": ["In Salah", "In Ghar", "Foggaret Azzaouia"],
+                    "In Guezzam-54": ["In Guezzam", "Tinzaouatine"],
+                    "Touggourt-55": [
                         "Touggourt",
                         "Nezla",
                         "Tebesbest",
@@ -1764,8 +1878,8 @@
                         "El-hadjira",
                         "El Alia",
                     ],
-                    "DZ-56": ["Djanet", "Bordj El Haouasse"],
-                    "DZ-57": [
+                    "Djanet-56": ["Djanet", "Bordj El Haouasse"],
+                    "El MGhair-57": [
                         "El-mghair",
                         "Oum Touyour",
                         "Still",
@@ -1775,11 +1889,11 @@
                         "Tenedla",
                         "Mrara",
                     ],
-                    "DZ-58": ["El Meniaa", "Hassi Gara", "Hassi Fehal"],
+                    "El Menia-58": ["El Meniaa", "Hassi Gara", "Hassi Fehal"],
                 };
-                var placeholder = "📍 البلدية";
+                var placeholder = "البلدية📍";
                 var city_field_template =
-                    '<select name="wooecom_city" id="wooecom_city" class="select " data-placeholder="' +
+                    '<select name="dqb_city" id="dqb_city" class="select " data-placeholder="' +
                     placeholder +
                     '" required="required"><option value="">' +
                     placeholder +
@@ -1797,51 +1911,127 @@
                     });
 
                     // Remove the existing city field
-                    $("#wooecom_city").remove();
+                    $("#dqb_city").remove();
 
                     // Add the new city field to the form
                     var city_field =
                         city_options.length > 1
                             ? createCityField(city_options)
                             : createCityField("");
-                    $("#wooecom_state").after(city_field);
+                    $("#dqb_state").after(city_field);
                 }
 
                 // Initial city field
-                $("#wooecom_state").after(createCityField(""));
+                $("#dqb_state").after(createCityField(""));
 
                 // Update city field on state change
-                $("select#wooecom_state").change(function () {
+                $("select#dqb_state").change(function () {
                     updateCityField($(this).val());
                 });
             });
         </script>
-        <div class="wooecom_placeholder"></div>
-        <div class="wooecom_quantity">
-            <span class="wooecom_minus"><i class="fa-solid fa-minus"></i></span>
-            <input type="number" value="1" min="1" name="wooecom_qty" id="wooecom_qty" required="" readonly="" />
-            <span class="wooecom_plus"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <button type="submit" class="wooecom_checkout" id="wcqof-place-order-btn">
-            <span><?php echo get_option('wcqof_place_order_text', 'اطلب الان'); ?></span>
-            <span class="wooecom_btn_loader"></span>
-        </button>
+        <div id="dqb_delivery_section" class="delivery-section">
+            <h3>🚚 سعر التوصيل</h3>
 
+            <label class="delivery-option">
+                <input type="radio" name="dqb_delivery_type" value="home" required />
+                <span class="delivery-text">🏠 توصيل إلى المنزل</span>
+                <span class="delivery-price" id="home_delivery_price">د.ج 0</span>
+            </label>
+
+            <label class="delivery-option">
+                <input type="radio" name="dqb_delivery_type" value="office" required />
+                <span class="delivery-text">🏢 توصيل إلى المكتب</span>
+                <span class="delivery-price" id="office_delivery_price">د.ج 0</span>
+            </label>
+        </div>
+        <!-- 🟢 Color & Size Selection -->
+        <ul class="dqb_variations modern_ui">
+            <?php
+            $product_id = get_the_ID();
+            $product = wc_get_product($product_id);
+            $attributes = $product->get_attributes();
+
+            foreach ($attributes as $attribute_name => $attribute) {
+                // ✅ Decode the attribute name to properly display Arabic characters
+                $attribute_label = wc_attribute_label(rawurldecode($attribute_name));
+                $attribute_label = mb_convert_encoding($attribute_label, 'UTF-8', 'auto');
+
+                // ✅ Handle Global Attributes (Taxonomy-based attributes)
+                if ($attribute->is_taxonomy()) {
+                    $terms = wp_get_post_terms($product_id, $attribute->get_name());
+
+                    if (!empty($terms)) {
+                        echo '<li class="attribute_modern_ui"><h4>' . esc_html($attribute_label) . ' :</h4>';
+                        foreach ($terms as $term) {
+                            // ✅ Properly decode and escape Arabic terms
+                            $term_name = esc_html(rawurldecode($term->name));
+                            $term_slug = sanitize_title($term_name);
+
+                            echo '<div class="attribute_inner">
+                        <input type="radio" name="dqb_' . esc_attr($attribute_name) . '" value="' . esc_attr($term_name) . '" id="' . esc_attr($term_slug) . '" >
+                        <label for="' . esc_attr($term_slug) . '">' . esc_html($term_name) . '</label>
+                    </div>';
+                        }
+                        echo '</li>';
+                    }
+                }
+                // ✅ Handle Custom Attributes (Local Attributes)
+                else {
+                    $custom_values = array_map('trim', explode('|', implode('|', $attribute->get_options())));
+
+                    if (!empty($custom_values)) {
+                        echo '<li class="attribute_modern_ui"><h4>' . esc_html($attribute_label) . ' :</h4>';
+                        foreach ($custom_values as $custom_value) {
+                            // ✅ Properly decode Arabic custom values
+                            $custom_value_clean = sanitize_text_field(rawurldecode($custom_value));
+                            $custom_value_slug = sanitize_title($custom_value_clean);
+
+                            echo '<div class="attribute_inner">
+                        <input type="radio" name="dqb_' . esc_attr($attribute_name) . '" value="' . esc_attr($custom_value_clean) . '" id="' . esc_attr($custom_value_slug) . '" >
+                        <label for="' . esc_attr($custom_value_slug) . '">' . esc_html($custom_value_clean) . '</label>
+                    </div>';
+                        }
+                        echo '</li>';
+                    }
+                }
+            }
+            ?>
+        </ul>
+
+
+
+
+
+        <input type="hidden" name="dqb_delivery_price" id="dqb_delivery_price" value="0" />
+
+        <div class="dqb_placeholder"></div>
+        <div class="dqb_quantity_container">
+            <div class="dqb_quantity">
+                <span class="dqb_minus"><i class="fa-solid fa-minus"></i></span>
+                <input type="number" value="1" min="1" name="dqb_qty" id="dqb_qty" required="" readonly="" />
+                <span class="dqb_plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <button type="submit" class="dqb_checkout" id="wcqof-place-order-btn">
+                <span><?php echo get_option('wcqof_place_order_text', 'اطلب الان'); ?></span>
+                <span class="dqb_btn_loader"></span>
+            </button>
+        </div>
         <!-- Order summary -->
     </div>
     <input type="hidden" name="product_id" value="<?php echo get_the_ID(); ?>">
-    <div class="wooecom_order_summary active">
-        <div class="wooecom_order_summary_head">
-            <div class="wooecom_order_summary_title">
+    <div class="dqb_order_summary active">
+        <div class="dqb_order_summary_head">
+            <div class="dqb_order_summary_title">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>ملخص الطلب</span>
             </div>
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down woocommerce_toggle_icon"></i> <!-- Added a class to the icon -->
         </div>
 
-        <div class="wooecom_price_table">
+        <div class="dqb_price_table">
             <div class="order_loader_container">
-                <span class="wooecom_order_loader"></span>
+                <span class="dqb_order_loader"></span>
             </div>
 
             <table>
@@ -1850,10 +2040,12 @@
                     <tr>
                         <td class="product_name"><?php echo get_the_title(); ?></td>
                         <td class="product_price">
-                            <span class="wooecom_order_qty">x<span id="wooecom_qty_display">1</span></span>
-                            <span class="wooecom_price">د.ج <span
-                                    id="wooecom_product_price"><?php echo wc_get_product(get_the_ID())->get_price(); ?></span></span>
-                            <input type="hidden" id="wooecom_price"
+                            <span class="dqb_order_qty">x<span id="dqb_qty_display">1</span></span>
+                            <span class="dqb_price"><?php echo wc_get_product(get_the_ID())->get_price(); ?>
+                                <span id="dqb_product_price">د.ج </span>
+                            </span>
+
+                            <input type="hidden" id="dqb_price"
                                 value="<?php echo wc_get_product(get_the_ID())->get_price(); ?>" />
                         </td>
                     </tr>
@@ -1861,28 +2053,19 @@
                     <!-- Shipping -->
                     <tr>
                         <td>سعر الشحن
-                            <div class="wooecom_shipping_prices">
-                                <ul class="wooecom_shipping_methods">
-                                    <li>
-                                        <select id="wooecom_shipping" name="wooecom_shipping">
-                                            <option value="0">اختر المنطقة</option>
-                                            <option value="200">منطقة 1 - د.ج 200</option>
-                                            <option value="300">منطقة 2 - د.ج 300</option>
-                                            <option value="500">منطقة 3 - د.ج 500</option>
-                                        </select>
-                                    </li>
-                                </ul>
+                            <div class="dqb_shipping_prices">
                             </div>
                         </td>
-                        <td class="shipping_price">د.ج <span id="wooecom_shipping_price">0</span></td>
+                        <td class="shipping_price"><span id="dqb_shipping_price">0</span>د.ج </td>
                     </tr>
                     <!-- Total Price -->
-                    <tr class="wooecom_row_total_price">
+                    <tr class="dqb_row_total_price">
                         <td>السعر الإجمالي</td>
                         <td class="total_price">
-                            <span class="wooecom_price">د.ج <span
-                                    id="wooecom_total_price"><?php echo wc_get_product(get_the_ID())->get_price(); ?></span></span>
-                            <input type="hidden" id="wooecom_total_price_input"
+                            <span class="dqb_price"><span
+                                    id="dqb_total_price"><?php echo wc_get_product(get_the_ID())->get_price(); ?></span>د.ج
+                            </span>
+                            <input type="hidden" id="dqb_total_price_input"
                                 value="<?php echo wc_get_product(get_the_ID())->get_price(); ?>" />
                         </td>
                     </tr>
@@ -1890,28 +2073,18 @@
             </table>
         </div>
     </div>
-    <input type="hidden" id="wooecom_total_price_input" name="wooecom_total_price"
+    <input type="hidden" id="dqb_total_price_input" name="dqb_total_price"
         value="<?php echo wc_get_product(get_the_ID())->get_price(); ?>" />
-
 </form>
-
-<!-- Order Summary -->
-<!-- <div id="wcqof-order-summary">
-    <h3>Order Summary</h3>
-    <p>Product Price: <span id="wcqof-product-price"><?php echo wc_get_product(get_the_ID())->get_price(); ?></span>
-        <?php echo get_woocommerce_currency_symbol(); ?></p>
-    <p>Quantity: <span id="wcqof-quantity-display">1</span></p>
-    <p><strong>Total: <span id="wcqof-total-price"></span> <?php echo get_woocommerce_currency_symbol(); ?></strong></p>
-</div>
-
-<div class="wooecom_sticky_footer">
-    <a href="#wooecom_instant_order" class="wooecom_buy_now">اشتري الان</a>
-    <div class="wooecom_footer_icons">
-        <a href="tel:+213561571407" class="href">
+<div class="dqb_sticky_footer">
+    <a href="#dqb_instant_order" class="dqb_buy_now">اشتري الان</a>
+    <div class="dqb_footer_icons">
+        <a href="tel:<?php echo get_option('wcqof_phone_number', '+213561571407'); ?>" class="href">
             <i class="fa-solid fa-phone"></i>
         </a>
-        <a target="_blank" href="https://wa.me/+213561571407" class="href">
+        <a target="_blank" href="https://wa.me/<?php echo get_option('wcqof_whatsapp_number', '+213561571407'); ?>"
+            class="href">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
-</div> -->
+</div>
