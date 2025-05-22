@@ -2019,7 +2019,7 @@
         </div>
         <!-- Order summary -->
     </div>
-    <input type="hidden" name="product_id" value="<?php echo get_the_ID(); ?>">
+    <input type="hidden" id="product_id" name="product_id" value="<?php echo get_the_ID(); ?>">
     <div class="dqb_order_summary active">
         <div class="dqb_order_summary_head">
             <div class="dqb_order_summary_title">

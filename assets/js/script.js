@@ -140,6 +140,17 @@ jQuery(document).ready(function ($) {
       console.log("AJAX Response:", response); // Debugging
 
       if (response.success) {
+        let productId = $("#product_id").val() || "unknown";
+        // ✅ Fire Facebook Pixel Purchase Event
+        fbq("track", "Purchase", {
+          value: $("#dqb_total_price_input").val(), // Get total order price
+          currency: "DZD", // Change this if needed
+          content_name: $("h1.product_title").text(), // Get product name
+          content_category: "Product Orders",
+          content_ids: [productId], // ✅ Ensures product ID is correctly sent
+          content_type: "product",
+        });
+
         messageBox
           .removeClass("dqb_error")
           .addClass("dqb_success")
